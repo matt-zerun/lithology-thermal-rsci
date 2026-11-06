@@ -1,0 +1,18 @@
+input:
+  path: data/synthetic_example.csv
+
+output:
+  directory: outputs/synthetic_example
+
+validation:
+  min_records_per_lithology: 10
+  density_identity_abs_tolerance_mg_m3: 0.02
+  density_identity_rel_tolerance: 0.02
+
+analysis:
+  families: [SVR, GAM, RF, XGB]
+  variants: [BASE, SMOOTH, INTERMEDIATE]
+  include_tuned: false
+  tune_missing: true
+  # null retains the frozen 80 x 80 response grid.
+  grid_size: null

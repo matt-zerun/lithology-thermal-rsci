@@ -1,0 +1,95 @@
+{
+  "random_state": 42,
+  "final_fit_scope": "all_material_states",
+  "grid_size": 80,
+  "families": [
+    "SVR",
+    "GAM",
+    "RF",
+    "XGB"
+  ],
+  "variants": [
+    "BASE",
+    "SMOOTH",
+    "INTERMEDIATE",
+    "TUNED"
+  ],
+  "settings": {
+    "SVR": {
+      "BASE": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": "scale",
+        "epsilon": 0.1
+      },
+      "SMOOTH": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": 0.01,
+        "epsilon": 0.1
+      },
+      "INTERMEDIATE": {
+        "kernel": "rbf",
+        "C": 10.0,
+        "gamma": 0.1,
+        "epsilon": 0.05
+      }
+    },
+    "GAM": {
+      "BASE": {
+        "n_splines": 20,
+        "lam": 0.6
+      },
+      "SMOOTH": {
+        "n_splines": 10,
+        "lam": 100.0
+      },
+      "INTERMEDIATE": {
+        "n_splines": 20,
+        "lam": 10.0
+      }
+    },
+    "RF": {
+      "BASE": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "SMOOTH": {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "min_samples_leaf": 10,
+        "max_features": 1.0
+      },
+      "INTERMEDIATE": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 1.0
+      }
+    },
+    "XGB": {
+      "BASE": {
+        "objective": "reg:squarederror"
+      },
+      "SMOOTH": {
+        "objective": "reg:squarederror",
+        "n_estimators": 300,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 10.0
+      },
+      "INTERMEDIATE": {
+        "objective": "reg:squarederror",
+        "n_estimators": 500,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 5.0
+      }
+    }
+  }
+}

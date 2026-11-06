@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the Zenodo software record; this repository is a code-only subset."
+title: "Lithology-specific thermal-conductivity response surfaces and RSCI diagnostics"
+type: software
+version: 2.0.1
+license: MIT
+authors:
+  - family-names: "Żeruń"
+    given-names: "Mateusz"
+    orcid: "https://orcid.org/0000-0002-6824-5624"
+    affiliation: "Polish Geological Institute – National Research Institute (PGI-NRI)"
+keywords:
+  - thermal conductivity
+  - mineral soils
+  - engineering geology
+  - machine learning
+  - response surfaces
+  - Response-Surface Consistency Index
+abstract: >-
+  Public implementation of unique-material-state aggregation,
+  parent-material-grouped predictive validation, nested RMSE
+  tuning, lithology-specific thermal-conductivity response-surface modelling,
+  convex-hull-restricted evaluation, Response-Surface Consistency Index
+  diagnostics, model-role review, and response-profile extraction for mineral
+  soils. Restricted record-level reference-analysis data are not distributed.
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21682909
+    description: Zenodo concept DOI

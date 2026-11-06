@@ -1,0 +1,21 @@
+{
+  "admissible_lambda_range": [
+    0.0,
+    5.0
+  ],
+  "gaussian_smoothing_sigma": 1.0,
+  "local_extrema_neighbourhood": 5,
+  "fragmentation_tolerance_fraction": 0.05,
+  "fragmentation_tolerance_percentile": 75,
+  "weights": {
+    "bounds_score": 0.2,
+    "smoothness_score": 0.25,
+    "extrema_score": 0.2,
+    "gradient_stability_score": 0.2,
+    "fragmentation_score": 0.15
+  },
+  "output_scale": [
+    0,
+    100
+  ]
+}

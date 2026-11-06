@@ -1,0 +1,13 @@
+field,required,type,unit_or_values,description,example,quality_control
+observation_id,yes,string,—,Unique source observation or measurement identifier,OBS-000001,non-empty and unique
+material_id,yes,string,—,Physical sample or material-member identity used in the material-state definition,MAT-0042,non-empty; maps to one parent/lithology/provenance
+parent_material_id,yes,string,—,Parent material or material series used as the grouped-validation unit,PARENT-0017,non-empty; never split within a CV fold
+lithology,yes,string,sand; silt; clayey_soil; clay,Harmonised mineral-soil class,sand,controlled vocabulary
+water_content_pct,yes,numeric,% dry mass,Gravimetric water content on a dry-mass basis,12.5,finite and >=0
+bulk_density_mg_m3,yes,numeric,Mg m^-3,Measured wet bulk density,1.86,finite and >0; likely-unit check; density identities when possible
+thermal_conductivity_w_mk,yes,numeric,W m^-1 K^-1,Measured thermal conductivity,1.74,finite and >0; likely-unit check
+source,yes,string,—,Non-sensitive source-provenance label,laboratory,non-empty and stable within material_id
+data_origin,yes,string,—,Provenance category,experimental,non-empty and stable within material_id
+dry_density_mg_m3,no,numeric,Mg m^-3,Dry bulk density,1.65,positive when present; <= wet density; density identity checked
+particle_density_mg_m3,no,numeric,Mg m^-3,Particle density,2.65,positive when present; >= wet bulk density
+measurement_temperature_c,no,numeric,deg C,Measurement-condition metadata; not a predictor,20.0,finite when present
